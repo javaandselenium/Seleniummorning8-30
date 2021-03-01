@@ -13,12 +13,12 @@ public class Test3 {
 	driver.findElement(By.id("username")).sendKeys("admin");
 	driver.findElement(By.name("pwd")).sendKeys("manager");
 	driver.findElement(By.xpath("//div[text()='Login ']")).click();
-    String title = driver.getTitle();
-    System.out.println(title);
+    String actualtitle = driver.getTitle();
+    System.out.println(actualtitle);
     String url = driver.getCurrentUrl();
     System.out.println(url);
     //verfication
-    if(title.equals("actiTIME - Login")) {
+    if(actualtitle.equals("actiTIME - Login")) {
     	System.out.println("Pass:Home page is dispalyed");
     }
     else
