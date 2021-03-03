@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Test6 {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		System.setProperty("webdriver.chrome.driver","./software/chromedriver.exe");
 		WebDriver driver=new ChromeDriver();
 		driver.get("https://demo.actitime.com/login.do");
@@ -20,6 +20,7 @@ public class Test6 {
         	 System.out.println("Fail:element is not dispalyed");
          }
          
+         Thread.sleep(3000);
          WebElement btn = driver.findElement(By.xpath("//div[text()='Login ']"));
 	if(btn.isEnabled()) {
 		System.out.println("Pass:element is enabled");
